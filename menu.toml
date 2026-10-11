@@ -1,0 +1,86 @@
+# Arch-flywheel meny. Varje post har en label och antingen `items` (undermeny),
+# `url` (öppnas med xdg-open) eller `cmd` (körs via sh -c).
+# Lägg till/ta bort fritt — filen läses om varje gång hjulet öppnas.
+
+[[items]]
+label = "Programmering"
+
+  [[items.items]]
+  label = "Rust"
+
+    [[items.items.items]]
+    label = "std / docs.rs"
+    url = "https://doc.rust-lang.org/std/"
+
+    [[items.items.items]]
+    label = "The Book"
+    url = "https://doc.rust-lang.org/book/"
+
+    [[items.items.items]]
+    label = "Rust (lokalt)"
+    cmd = "rustup doc"
+
+    [[items.items.items]]
+    label = "Tokio"
+    url = "https://docs.rs/tokio/latest/tokio/"
+
+    [[items.items.items]]
+    label = "Serde"
+    url = "https://docs.rs/serde/latest/serde/"
+
+    [[items.items.items]]
+    label = "Axum"
+    url = "https://docs.rs/axum/latest/axum/"
+
+    [[items.items.items]]
+    label = "Clap"
+    url = "https://docs.rs/clap/latest/clap/"
+
+    [[items.items.items]]
+    label = "Rayon"
+    url = "https://docs.rs/rayon/latest/rayon/"
+
+  [[items.items]]
+  label = "C"
+
+    [[items.items.items]]
+    label = "man 2 (syscalls)"
+    cmd = "kitty -e man 2 intro"
+
+    [[items.items.items]]
+    label = "man 3 (libc)"
+    cmd = "kitty -e man 3 intro"
+
+    [[items.items.items]]
+    label = "cppreference"
+    url = "https://en.cppreference.com/w/c"
+
+[[items]]
+label = "nvim"
+
+  [[items.items]]
+  label = ":help"
+  cmd = "kitty -e nvim +':help'"
+
+  [[items.items]]
+  label = "Lua-guide"
+  cmd = "kitty -e nvim +':help lua-guide'"
+
+  [[items.items]]
+  label = "Keymap-cheat"
+  cmd = "$HOME/.config/hypr/scripts/hypr_sheet.py"
+
+[[items]]
+label = "Linux"
+
+  [[items.items]]
+  label = "man"
+  cmd = "kitty -e man man"
+
+  [[items.items]]
+  label = "Arch Wiki"
+  url = "https://wiki.archlinux.org/"
+
+  [[items.items]]
+  label = "systemd"
+  cmd = "kitty -e man systemd.directives"

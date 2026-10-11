@@ -1,0 +1,20 @@
+[package]
+name = "arch-flywheel"
+version = "0.1.0"
+edition = "2021"
+description = "En GTA-stil radial meny (flywheel) för Hyprland — håll SUPER+SPACE, välj, släpp."
+license = "MIT"
+
+[[bin]]
+name = "arch-flywheel"
+path = "src/main.rs"
+
+[dependencies]
+gtk4 = "0.9"
+gtk4-layer-shell = "0.4"
+serde = { version = "1", features = ["derive"] }
+toml = "0.8"
+
+[profile.release]
+opt-level = 2
+strip = true
